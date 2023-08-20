@@ -29,7 +29,7 @@ pipeline{
 [
 artifactId: 'spring-boot-starter-parent', 
 classifier: '', 
-file: '${env.workspace}/target/*.jar', 
+file: '${env.Workspace}/target/*.jar', 
 type: 'jar'
 ]
 ], 
