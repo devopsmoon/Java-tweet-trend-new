@@ -29,7 +29,7 @@ pipeline{
 [
 artifactId: 'spring-boot-starter-parent', 
 classifier: '', 
-file: 'workspace/pipeline1/target/demo-workshop-2.1.2.jar', 
+file: '${env.workspace}/target/demo-workshop-2.1.2.jar', 
 type: 'jar'
 ]
 ], 
