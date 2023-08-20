@@ -10,5 +10,10 @@ pipeline{
                 git branch: 'main', credentialsId: 'Jenkins-user', url: 'git@github.com:devopsmoon/Java-tweet-trend-new.git'
             }
         }
+        stage('Build'){
+            steps{
+                sh "mvn install"
+            }
+        }
     }
 }
