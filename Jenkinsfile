@@ -23,5 +23,24 @@ pipeline{
                 }
             }
         }
+        stage('Nexus pull'){
+            steps{
+                nexusArtifactUploader artifacts: [
+[
+artifactId: 'spring-boot-starter-parent', 
+classifier: '', 
+file: 'target/*.jar', 
+type: 'jar'
+]
+], 
+credentialsId: 'admin', 
+groupId: 'com.valaxy', 
+nexusUrl: '54.144.157.174:8081', 
+nexusVersion: 'nexus3', 
+protocol: 'http', 
+repository: 'Java-App-Repo/', 
+version: '2.2.0.RELEASE'
+            }
+        }
     }
 }
